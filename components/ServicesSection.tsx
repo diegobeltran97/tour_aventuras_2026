@@ -9,7 +9,7 @@ export default function ServicesSection() {
             Nuestro Portafolio
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold text-corporate-900 mb-4">
-            Ecosistema de Soluciones B2B
+            Todo lo que su empresa necesita, en un solo lugar
           </h3>
           <p className="text-gray-600 text-lg">
             Elimine la fricción de gestionar múltiples proveedores. Cubrimos toda la cadena logística de su personal y ejecutivos.
@@ -23,7 +23,7 @@ export default function ServicesSection() {
               <FaCarSide />
             </div>
             <h4 className="text-xl font-bold text-corporate-900 mb-3">Movilidad y Traslados</h4>
-            <p className="text-gray-600 mb-6 line-clamp-3">
+            <p className="text-gray-600 mb-6 leading-relaxed">
               Flotas ejecutivas impecables, transporte de personal y choferes capacitados. Puntualidad absoluta desde el aeropuerto hasta la oficina.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
@@ -48,7 +48,7 @@ export default function ServicesSection() {
               <FaPlaneDeparture />
             </div>
             <h4 className="text-xl font-bold text-corporate-900 mb-3">Gestión de Viajes (TMC)</h4>
-            <p className="text-gray-600 mb-6 line-clamp-3">
+            <p className="text-gray-600 mb-6 leading-relaxed">
               Emisión de tiquetes aéreos corporativos y reservas de hospedaje con tarifas competitivas. Control total de viáticos.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
@@ -70,7 +70,7 @@ export default function ServicesSection() {
               <FaUserGear />
             </div>
             <h4 className="text-xl font-bold text-corporate-900 mb-3">Logística MICE</h4>
-            <p className="text-gray-600 mb-6 line-clamp-3">
+            <p className="text-gray-600 mb-6 leading-relaxed">
               Soluciones de apoyo para Reuniones, Incentivos, Conferencias y Eventos. Organización fluida para que usted se enfoque en el contenido.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">

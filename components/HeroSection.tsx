@@ -1,4 +1,5 @@
-import { FaBuilding, FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
+import { FaBuilding, FaArrowRight, FaUmbrellaBeach } from "react-icons/fa6";
 
 export default function HeroSection() {
   return (
@@ -36,8 +37,17 @@ export default function HeroSection() {
               href="#servicios"
               className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-md text-center font-semibold text-lg hover:bg-white/20 transition backdrop-blur-sm"
             >
-              Ver Ecosistema
+              Nuestro Portafolio
             </a>
+          </div>
+          <div className="mt-8 pt-6 border-t border-white/10">
+            <Link
+              href="/turismo"
+              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition font-medium"
+            >
+              <FaUmbrellaBeach className="text-corporate-400" />
+              ¿Deseas hacer turismo? Ver paquetes vacacionales →
+            </Link>
           </div>
         </div>
       </div>

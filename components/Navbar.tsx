@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   FaBars,
   FaXmark,
@@ -15,7 +16,7 @@ const navLinks = [
   { href: "#filosofia", label: "Nuestra Filosofía", icon: <FaBuilding /> },
   {
     href: "#ai-planner",
-    label: "IA Planner ✨",
+    label: "Planificador ✨",
     icon: <FaPlaneDeparture />,
     highlight: true,
   },
@@ -34,10 +35,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-corporate-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                A
-              </div>
+            <div className="flex items-center gap-3">
+              <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={48} height={38} className="rounded-md" />
               <span className="font-bold text-xl tracking-tight text-corporate-900">
                 Tour Aventuras PTY{" "}
                 <span className="font-light text-corporate-500">
@@ -101,9 +100,7 @@ export default function Navbar() {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-corporate-500 to-accent-500 rounded-lg flex items-center justify-center text-white font-bold">
-              A
-            </div>
+            <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={36} height={28} className="rounded-md" />
             <span className="font-bold text-corporate-900 tracking-tight">
               Tour Aventuras PTY
             </span>

@@ -76,15 +76,15 @@ export default function AIPlannerSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-corporate-100 text-corporate-500 text-sm font-semibold mb-6">
-          <FaRobot /> Impulsado por Gemini IA
+          <FaRobot /> Simulador de Propuestas
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-corporate-900 mb-4">
-          Simulador de Plan Logístico B2B
+          Planificador de Logística Corporativa
         </h2>
         <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-          Escriba los detalles de su próximo viaje corporativo o evento y
-          nuestra IA generará una propuesta estratégica al instante demostrando
-          cómo Aventuras PTY puede optimizarlo.
+          Describa los detalles de su próximo viaje o evento corporativo y
+          obtendrá al instante una propuesta estratégica que demuestra cómo
+          Aventuras PTY puede optimizar cada detalle.
         </p>
 
         <div className="bg-white rounded-2xl p-8 max-w-3xl mx-auto shadow-xl border border-gray-100 text-left">
@@ -109,11 +109,10 @@ export default function AIPlannerSection() {
           >
             {loading ? (
               <>
-                <FaCircleNotch className="animate-spin" /> Analizando
-                requerimientos... ✨
+                <FaCircleNotch className="animate-spin" /> Preparando propuesta...
               </>
             ) : (
-              "✨ Generar Propuesta Estratégica"
+              "✨ Generar Propuesta"
             )}
           </button>
 
@@ -121,7 +120,7 @@ export default function AIPlannerSection() {
             <div className="mt-8 text-center text-gray-500 py-8 animate-pulse">
               <FaLayerGroup className="text-4xl mb-4 text-corporate-400 mx-auto" />
               <p className="font-medium">
-                Nuestra IA está diseñando su ecosistema logístico...
+                Preparando su propuesta logística personalizada...
               </p>
             </div>
           )}
