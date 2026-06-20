@@ -1,4 +1,8 @@
-import { FaFileInvoiceDollar, FaShieldHalved, FaHeadset } from "react-icons/fa6";
+import {
+  FaFileInvoiceDollar,
+  FaShieldHalved,
+  FaHeadset,
+} from "react-icons/fa6";
 
 export default function PhilosophySection() {
   return (
@@ -8,7 +12,7 @@ export default function PhilosophySection() {
           {/* Image column */}
           <div className="w-full lg:w-1/2 relative">
             <img
-              src="https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2070&auto=format&fit=crop"
+              src="/presentation_pty.png"
               alt="Ejecutivos en Panamá"
               className="rounded-2xl shadow-2xl z-10 relative"
             />
@@ -23,7 +27,10 @@ export default function PhilosophySection() {
               <span className="text-corporate-500">Precisión Militar.</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Nuestra ideología se basa en la &ldquo;Doble Promesa&rdquo;: garantizamos un viaje cómodo y seguro para el pasajero, al mismo tiempo que brindamos una gestión transparente, centralizada y eficiente para el departamento administrativo que nos contrata.
+              Nuestra ideología se basa en la &ldquo;Doble Promesa&rdquo;:
+              garantizamos un viaje cómodo y seguro para el pasajero, al mismo
+              tiempo que brindamos una gestión transparente, centralizada y
+              eficiente para el departamento administrativo que nos contrata.
             </p>
 
             <div className="space-y-6">
@@ -32,9 +39,12 @@ export default function PhilosophySection() {
                   <FaFileInvoiceDollar />
                 </div>
                 <div>
-                  <h5 className="text-xl font-bold text-corporate-900">Una Sola Factura</h5>
+                  <h5 className="text-xl font-bold text-corporate-900">
+                    Una Sola Factura
+                  </h5>
                   <p className="text-gray-600">
-                    Olvídese de procesar pagos a múltiples choferes o agencias. Entregamos reportes centralizados y facturación consolidada a 30 días.
+                    Olvídese de procesar pagos a múltiples choferes o agencias.
+                    Entregamos reportes centralizados y facturación consolidada.
                   </p>
                 </div>
               </div>
@@ -44,9 +54,13 @@ export default function PhilosophySection() {
                   <FaShieldHalved />
                 </div>
                 <div>
-                  <h5 className="text-xl font-bold text-corporate-900">Estándares Farmacéuticos</h5>
+                  <h5 className="text-xl font-bold text-corporate-900">
+                    Estándares Farmacéuticos
+                  </h5>
                   <p className="text-gray-600">
-                    Trabajar con el sector salud nos enseñó a no cometer errores. Aplicamos estrictos protocolos de bioseguridad y puntualidad.
+                    Trabajar con el sector salud nos enseñó a no cometer
+                    errores. Aplicamos estrictos protocolos de bioseguridad y
+                    puntualidad.
                   </p>
                 </div>
               </div>
@@ -56,9 +70,13 @@ export default function PhilosophySection() {
                   <FaHeadset />
                 </div>
                 <div>
-                  <h5 className="text-xl font-bold text-corporate-900">Soporte Real 24/7</h5>
+                  <h5 className="text-xl font-bold text-corporate-900">
+                    Soporte Real 24/7
+                  </h5>
                   <p className="text-gray-600">
-                    Los vuelos se retrasan, las reuniones se extienden. Nuestro equipo está disponible 24/7 para resolver imprevistos sin afectar a su equipo.
+                    Los vuelos se retrasan, las reuniones se extienden. Nuestro
+                    equipo está disponible 24/7 para resolver imprevistos sin
+                    afectar a su equipo.
                   </p>
                 </div>
               </div>

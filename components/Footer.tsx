@@ -8,12 +8,12 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={36} height={28} className="rounded brightness-110" />
           <span className="font-bold text-white tracking-tight">
-            Tour Aventuras PTY{" "}
+            Tour Aventuras Pty{" "}
             <span className="font-light text-corporate-500">| Corporate</span>
           </span>
         </div>
         <div className="text-sm">
-          Ciudad de Panamá, Panamá | touraventuraspty@gmail.com | +507 6544-1217
+          Ciudad de Panamá, Panamá | contacto@touraventuraspty.com | +507 6588-9209
         </div>
         <div className="flex gap-4">
           <a

@@ -21,6 +21,7 @@ import {
 const cityTours = [
   {
     name: "City Tour por la Ciudad de Panamá",
+    image: "https://images.unsplash.com/photo-1614960395416-a8a0d7f4cfbe?q=80&w=800&auto=format&fit=crop",
     duration: "4–6 horas",
     description:
       "Comparte un medio día con nosotros conociendo la historia y lo contemporáneo de una ciudad con tan variadas culturas históricas y modernas.",
@@ -35,6 +36,7 @@ const cityTours = [
   },
   {
     name: "City Tour Nocturno",
+    image: "https://images.unsplash.com/photo-1519862170344-6cd5e49cb996?q=80&w=800&auto=format&fit=crop",
     duration: "Noche",
     description:
       "Conoce un lugar mágico junto al mar donde puedes observar la Ciudad de Panamá, disfrutando de una noche cálida e histórica.",
@@ -47,6 +49,7 @@ const cityTours = [
   },
   {
     name: "Tour Nocturno — Vida Nocturna",
+    image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop",
     duration: "Noche",
     description:
       "Uno de los destinos más visitados por residentes y turistas en Ciudad de Panamá debido a la variedad gastronómica, bebidas de diferentes estilos y discotecas.",
@@ -62,19 +65,22 @@ const cityTours = [
 const ecoTours = [
   {
     name: "Isla de los Monos — Gamboa",
+    image: "https://images.unsplash.com/photo-1559299004-3a6caedfa9c7?q=80&w=800&auto=format&fit=crop",
     duration: "Medio día",
     description:
-      "Disfruta del majestuoso paisaje tropical conociendo diferentes especies en el Lago Gatún, lleno de vida salvaje. Navega lentamente por el punto más alto del Canal de Panamá.",
+      "Adéntrate en las aguas del Lago Gatún a bordo de una lancha y descubre la asombrosa biodiversidad panameña. Observa monos, perezosos, caimanes y cientos de aves tropicales en su entorno natural, navegando por el punto más elevado del Canal de Panamá.",
     includes: [
-      "Transporte terrestre",
-      "Traslado en lancha",
-      "Fruta y agua",
-      "Guía",
+      "Transporte terrestre A/C",
+      "Traslado en lancha por Lago Gatún",
+      "Avistamiento de monos, perezosos y aves tropicales",
+      "Fruta fresca y agua",
+      "Guía naturalista",
     ],
     note: null,
   },
   {
     name: "San Blas",
+    image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=800&auto=format&fit=crop",
     duration: "Todo el día",
     description:
       "El tiempo se detiene en las raíces de la cultura Guna, en un lugar de arena blanca y aguas cristalinas. Visita 3 islas: Isla Perro Chico, Isla Wailidub y Piscinas Naturales.",
@@ -87,10 +93,11 @@ const ecoTours = [
     note: null,
   },
   {
-    name: "Emberá",
+    name: "Emberá — Comunidad Indígena",
+    image: "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=800&auto=format&fit=crop",
     duration: "6–8 horas",
     description:
-      "Disfruta de la biodiversidad navegando por el Río Chagres, comparte y convive a través de las raíces y tradiciones de la comunidad indígena.",
+      "Disfruta de la biodiversidad navegando por el Río Chagres, comparte y convive a través de las raíces y tradiciones de la comunidad indígena Emberá.",
     includes: [
       "Transporte terrestre",
       "Paseo en piragua a motor",
@@ -102,6 +109,7 @@ const ecoTours = [
   },
   {
     name: "Tránsito Parcial — Canal de Panamá",
+    image: "https://images.unsplash.com/photo-1537039557641-9cf6c0f14b74?q=80&w=800&auto=format&fit=crop",
     duration: "6–8 horas",
     description:
       "Vive el Canal de Panamá navegando a bordo de un ferry por su histórico cauce. Admira esta maravilla de la ingeniería y su funcionamiento.",
@@ -117,6 +125,7 @@ const ecoTours = [
 
 const shoppingTour = {
   name: "Zona Libre de Colón",
+  image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
   duration: "Todo el día",
   description:
     "Considerada la segunda zona franca más grande del mundo y la primera en el hemisferio occidental. Famosa por compras sin límite y libre de impuestos: electrónicos, licores, muebles, ropa, zapatos, joyas, relojes y perfumes de las marcas más afamadas.",
@@ -137,32 +146,43 @@ function TourCard({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-7 hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col group">
-      <div className="w-12 h-12 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-500 text-xl mb-5 group-hover:bg-corporate-500 group-hover:text-white transition">
-        {icon}
-      </div>
-      <div className="flex items-start justify-between gap-2 mb-2">
-        <h3 className="text-lg font-bold text-corporate-900 leading-snug">{tour.name}</h3>
-        <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-corporate-500 bg-corporate-50 px-2 py-1 rounded-full whitespace-nowrap">
-          <FaClock className="text-[10px]" /> {tour.duration}
-        </span>
-      </div>
-      <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">{tour.description}</p>
-      <div className="border-t border-gray-100 pt-4">
-        <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">Incluye</p>
-        <ul className="space-y-1.5">
-          {tour.includes.map((item) => (
-            <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-              <FaCheck className="text-accent-500 shrink-0 mt-0.5 text-xs" />
-              {item}
-            </li>
-          ))}
-        </ul>
-        {tour.note && (
-          <p className="mt-3 text-xs font-semibold text-corporate-500 bg-corporate-50 px-3 py-1.5 rounded-lg inline-block">
-            {tour.note}
-          </p>
-        )}
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col group">
+      {tour.image && (
+        <div className="h-48 overflow-hidden">
+          <img
+            src={tour.image}
+            alt={tour.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      )}
+      <div className="p-7 flex flex-col flex-1">
+        <div className="w-12 h-12 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-500 text-xl mb-5 group-hover:bg-corporate-500 group-hover:text-white transition">
+          {icon}
+        </div>
+        <div className="flex items-start justify-between gap-2 mb-2">
+          <h3 className="text-lg font-bold text-corporate-900 leading-snug">{tour.name}</h3>
+          <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-corporate-500 bg-corporate-50 px-2 py-1 rounded-full whitespace-nowrap">
+            <FaClock className="text-[10px]" /> {tour.duration}
+          </span>
+        </div>
+        <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">{tour.description}</p>
+        <div className="border-t border-gray-100 pt-4">
+          <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">Incluye</p>
+          <ul className="space-y-1.5">
+            {tour.includes.map((item) => (
+              <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
+                <FaCheck className="text-accent-500 shrink-0 mt-0.5 text-xs" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          {tour.note && (
+            <p className="mt-3 text-xs font-semibold text-corporate-500 bg-corporate-50 px-3 py-1.5 rounded-lg inline-block">
+              {tour.note}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -193,7 +213,7 @@ function SectionHeader({
 /* ─── Page ─── */
 
 export default function TurismoPage() {
-  const whatsapp = "https://wa.me/50765441217";
+  const whatsapp = "https://wa.me/50765889209";
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -202,9 +222,9 @@ export default function TurismoPage() {
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={44} height={34} className="rounded-md" />
+            <Image src="/logo.jpg" alt="Tour Aventuras Pty" width={44} height={34} className="rounded-md" />
             <div>
-              <span className="font-bold text-corporate-900 text-sm leading-tight block">Tour Aventuras PTY</span>
+              <span className="font-bold text-corporate-900 text-sm leading-tight block">Tour Aventuras Pty</span>
               <span className="text-corporate-500 text-xs font-semibold">Servicios Turísticos</span>
             </div>
           </div>
@@ -234,7 +254,7 @@ export default function TurismoPage() {
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5">
               Descubre Panamá con{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-corporate-400 to-accent-500">
-                Tour Aventuras PTY
+                Tour Aventuras Pty
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed font-light">
@@ -322,27 +342,36 @@ export default function TurismoPage() {
             title="Zona Libre de Colón"
             description="La segunda zona franca más grande del mundo, en el hemisferio occidental."
           />
-          <div className="bg-white rounded-2xl shadow-sm border border-corporate-100 p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
-            <div className="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-500 text-2xl shrink-0">
-              <FaShip />
+          <div className="bg-white rounded-2xl shadow-sm border border-corporate-100 overflow-hidden">
+            <div className="h-56 overflow-hidden">
+              <img
+                src={shoppingTour.image}
+                alt={shoppingTour.name}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="flex-1">
-              <div className="flex flex-wrap items-center gap-3 mb-3">
-                <h3 className="text-2xl font-bold text-corporate-900">{shoppingTour.name}</h3>
-                <span className="inline-flex items-center gap-1 text-xs font-semibold text-corporate-500 bg-corporate-50 px-2 py-1 rounded-full">
-                  <FaClock className="text-[10px]" /> {shoppingTour.duration}
-                </span>
+            <div className="p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-14 h-14 bg-corporate-50 rounded-xl flex items-center justify-center text-corporate-500 text-2xl shrink-0">
+                <FaShip />
               </div>
-              <p className="text-gray-600 leading-relaxed mb-6">{shoppingTour.description}</p>
-              <div>
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">Incluye</p>
-                <ul className="flex flex-wrap gap-3">
-                  {shoppingTour.includes.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg">
-                      <FaCheck className="text-accent-500 text-xs shrink-0" /> {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
+                  <h3 className="text-2xl font-bold text-corporate-900">{shoppingTour.name}</h3>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-corporate-500 bg-corporate-50 px-2 py-1 rounded-full">
+                    <FaClock className="text-[10px]" /> {shoppingTour.duration}
+                  </span>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-6">{shoppingTour.description}</p>
+                <div>
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">Incluye</p>
+                  <ul className="flex flex-wrap gap-3">
+                    {shoppingTour.includes.map((item) => (
+                      <li key={item} className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg">
+                        <FaCheck className="text-accent-500 text-xs shrink-0" /> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -371,15 +400,15 @@ export default function TurismoPage() {
               className="flex flex-col items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white px-5 py-5 rounded-xl transition"
             >
               <FaWhatsapp className="text-2xl text-accent-500" />
-              <span className="font-semibold text-sm">6544-1217</span>
+              <span className="font-semibold text-sm">+507 6588-9209</span>
               <span className="text-xs text-gray-400">WhatsApp</span>
             </a>
             <a
-              href="mailto:touraventuraspty@gmail.com"
+              href="mailto:contacto@touraventuraspty.com"
               className="flex flex-col items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/15 text-white px-5 py-5 rounded-xl transition"
             >
               <FaEnvelope className="text-2xl text-corporate-400" />
-              <span className="font-semibold text-sm truncate w-full text-center text-xs">touraventuraspty@gmail.com</span>
+              <span className="font-semibold text-xs truncate w-full text-center">contacto@touraventuraspty.com</span>
               <span className="text-xs text-gray-400">Correo</span>
             </a>
             <a
@@ -415,9 +444,9 @@ export default function TurismoPage() {
       {/* ── Footer ── */}
       <footer className="bg-corporate-900 border-t border-gray-800 py-6 text-center">
         <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} Tour Aventuras PTY · Ciudad de Panamá ·{" "}
-          <a href="mailto:touraventuraspty@gmail.com" className="hover:text-gray-300 transition">
-            touraventuraspty@gmail.com
+          © {new Date().getFullYear()} Tour Aventuras Pty · Ciudad de Panamá ·{" "}
+          <a href="mailto:contacto@touraventuraspty.com" className="hover:text-gray-300 transition">
+            contacto@touraventuraspty.com
           </a>
         </p>
       </footer>

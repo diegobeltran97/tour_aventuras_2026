@@ -43,10 +43,15 @@ export default function HeroSection() {
           <div className="mt-8 pt-6 border-t border-white/10">
             <Link
               href="/turismo"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition font-medium"
+              className="inline-flex items-center gap-4 bg-white/10 hover:bg-accent-500/30 border border-accent-500/40 px-5 py-4 rounded-2xl transition-all duration-300 group max-w-md"
             >
-              <FaUmbrellaBeach className="text-corporate-400" />
-              ¿Deseas hacer turismo? Ver paquetes vacacionales →
+              <div className="shrink-0 w-12 h-12 rounded-xl bg-accent-500/20 flex items-center justify-center text-accent-500 text-2xl group-hover:bg-accent-500 group-hover:text-white transition-all duration-300">
+                <FaUmbrellaBeach />
+              </div>
+              <div>
+                <p className="font-bold text-white text-sm">¿Viajando a Panamá?</p>
+                <p className="text-gray-300 text-xs mt-0.5">Descubre city tours, ecoturismo, San Blas y más →</p>
+              </div>
             </Link>
           </div>
         </div>

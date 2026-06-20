@@ -36,9 +36,15 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={48} height={38} className="rounded-md" />
+              <Image
+                src="/logo_final.png"
+                alt="Tour Aventuras PTY"
+                width={48}
+                height={38}
+                className="rounded-md"
+              />
               <span className="font-bold text-xl tracking-tight text-corporate-900">
-                Tour Aventuras PTY{" "}
+                Tour Aventuras Pty{" "}
                 <span className="font-light text-corporate-500">
                   | Corporate
                 </span>
@@ -100,9 +106,15 @@ export default function Navbar() {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
           <div className="flex items-center gap-2">
-            <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={36} height={28} className="rounded-md" />
+            <Image
+              src="/logo.jpg"
+              alt="Tour Aventuras PTY"
+              width={36}
+              height={28}
+              className="rounded-md"
+            />
             <span className="font-bold text-corporate-900 tracking-tight">
-              Tour Aventuras PTY
+              Tour Aventuras Pty
             </span>
           </div>
           <button
