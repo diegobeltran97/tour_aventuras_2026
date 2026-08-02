@@ -19,10 +19,8 @@ export default function PhilosophySection() {
           {/* Content column */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-corporate-900 mb-6">
-              Su Aliado en{" "}
-              <span className="text-corporate-500">
-                Turismo de Negocios en Panamá.
-              </span>
+              Su Aliado{" "}
+              <span className="text-corporate-500">de Negocios en Panamá.</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Somos el socio estratégico de las empresas que se mueven por

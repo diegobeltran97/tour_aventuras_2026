@@ -253,9 +253,6 @@ export default function TurismoPage() {
               <span className="font-bold text-corporate-900 text-sm leading-tight block">
                 Tour Aventuras Pty
               </span>
-              <span className="text-corporate-500 text-xs font-semibold">
-                Servicios Turísticos
-              </span>
             </div>
           </div>
           <ModeToggle />

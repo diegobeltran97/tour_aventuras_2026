@@ -45,9 +45,9 @@ export default function Navbar() {
                 className="rounded-md"
               />
               <span className="font-bold text-xl tracking-tight text-corporate-900">
-                Tour Aventuras Pty{" "}
+                Tour Aventuras
                 <span className="font-light text-corporate-500">
-                  | Corporate
+                  | Corporativo
                 </span>
               </span>
             </div>

@@ -24,7 +24,9 @@ export default function HeroSection() {
             Corporativa.
           </h1>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed font-light">
-            Centralizamos los traslados, viajes y eventos de su empresa en Panamá. Un solo proveedor, facturación consolidada y precisión garantizada.
+            Centralizamos los traslados, viajes y eventos de su empresa en
+            Panamá. Un solo proveedor, facturación consolidada y precisión
+            garantizada.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -40,7 +42,7 @@ export default function HeroSection() {
               Nuestro Portafolio
             </a>
           </div>
-          <div className="mt-8 pt-6 border-t border-white/10">
+          {/*    <div className="mt-8 pt-6 border-t border-white/10">
             <Link
               href="/turismo"
               className="inline-flex items-center gap-4 bg-white/10 hover:bg-accent-500/30 border border-accent-500/40 px-5 py-4 rounded-2xl transition-all duration-300 group max-w-md"
@@ -53,7 +55,7 @@ export default function HeroSection() {
                 <p className="text-gray-300 text-xs mt-0.5">Descubre city tours, ecoturismo, San Blas y más →</p>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
