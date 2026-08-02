@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Tour Avenuturas PTY | Corporate Solutions",
   description:
     "Soluciones Integrales de Movilidad y Logística Corporativa en Panamá",
+  icons: {
+    icon: { url: "/logo_final_icon.svg", type: "image/svg+xml" },
+  },
 };
 
 export default function RootLayout({
