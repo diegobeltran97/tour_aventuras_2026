@@ -20,13 +20,14 @@ import sanblas from "../../public/san_blass/san_blass.jpg";
 import gamboa from "../../public/gamboa/gamboa.jpg";
 import transito from "../../public/transito/transito.jpeg";
 import zonafree from "../../public/zona_libre/zona_free.jpg";
+import cityTour from "../../public/city_tour/city_tour.jpg";
 
 /* ─── Tour data from brochure ─── */
 
 const cityTours = [
   {
     name: "City Tour por la Ciudad de Panamá",
-    image: "/city_tour.jpg",
+    image: cityTour,
     duration: "4–6 horas",
     description:
       "Comparte un medio día con nosotros conociendo la historia y lo contemporáneo de una ciudad con tan variadas culturas históricas y modernas.",
