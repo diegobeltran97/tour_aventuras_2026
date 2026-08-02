@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section
       className="min-h-screen flex items-center pt-20"
       style={{
-        backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')`,
+        backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('/bussines_side.avif')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

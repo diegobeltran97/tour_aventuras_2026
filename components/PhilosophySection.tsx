@@ -1,8 +1,4 @@
-import {
-  FaFileInvoiceDollar,
-  FaShieldHalved,
-  FaHeadset,
-} from "react-icons/fa6";
+import { FaRoute, FaFileInvoiceDollar, FaHeadset } from "react-icons/fa6";
 
 export default function PhilosophySection() {
   return (
@@ -23,44 +19,47 @@ export default function PhilosophySection() {
           {/* Content column */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-corporate-900 mb-6">
-              Hospitalidad Corporativa con{" "}
-              <span className="text-corporate-500">Precisión Militar.</span>
+              Su Aliado en{" "}
+              <span className="text-corporate-500">
+                Turismo de Negocios en Panamá.
+              </span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Nuestra ideología se basa en la &ldquo;Doble Promesa&rdquo;:
-              garantizamos un viaje cómodo y seguro para el pasajero, al mismo
-              tiempo que brindamos una gestión transparente, centralizada y
-              eficiente para el departamento administrativo que nos contrata.
+              Somos el socio estratégico de las empresas que se mueven por
+              Panamá. Nos encargamos de toda la logística del viaje corporativo
+              —traslados, agendas e imprevistos— para que su equipo se concentre
+              en lo que realmente importa: cerrar negocios.
             </p>
 
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-corporate-50 flex items-center justify-center text-corporate-500 text-xl">
-                  <FaFileInvoiceDollar />
+                  <FaRoute />
                 </div>
                 <div>
                   <h5 className="text-xl font-bold text-corporate-900">
-                    Una Sola Factura
+                    Logística Integral
                   </h5>
                   <p className="text-gray-600">
-                    Olvídese de procesar pagos a múltiples choferes o agencias.
-                    Entregamos reportes centralizados y facturación consolidada.
+                    Coordinamos traslados ejecutivos, conexiones aéreas y
+                    agendas desde un único punto de contacto. Usted delega la
+                    operación; nosotros la ejecutamos sin fricciones.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-corporate-50 flex items-center justify-center text-corporate-500 text-xl">
-                  <FaShieldHalved />
+                  <FaFileInvoiceDollar />
                 </div>
                 <div>
                   <h5 className="text-xl font-bold text-corporate-900">
-                    Estándares Farmacéuticos
+                    Gestión Corporativa
                   </h5>
                   <p className="text-gray-600">
-                    Trabajar con el sector salud nos enseñó a no cometer
-                    errores. Aplicamos estrictos protocolos de bioseguridad y
-                    puntualidad.
+                    Una sola factura consolidada y reportes centralizados.
+                    Olvídese de coordinar múltiples proveedores: le damos
+                    control y visibilidad total del gasto de viaje.
                   </p>
                 </div>
               </div>
@@ -74,9 +73,9 @@ export default function PhilosophySection() {
                     Soporte Real 24/7
                   </h5>
                   <p className="text-gray-600">
-                    Los vuelos se retrasan, las reuniones se extienden. Nuestro
-                    equipo está disponible 24/7 para resolver imprevistos sin
-                    afectar a su equipo.
+                    Los vuelos se retrasan y las reuniones se extienden. Un
+                    equipo dedicado está disponible las 24 horas para resolver
+                    cualquier imprevisto sin afectar a su equipo.
                   </p>
                 </div>
               </div>

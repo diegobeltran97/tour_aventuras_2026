@@ -1,25 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
+import ModeToggle from "./ModeToggle";
 import {
   FaBars,
   FaXmark,
   FaBuilding,
   FaCarSide,
-  FaPlaneDeparture,
   FaCalendarCheck,
 } from "react-icons/fa6";
 
-const navLinks = [
+type NavLink = {
+  href: string;
+  label: string;
+  icon: ReactNode;
+  highlight?: boolean;
+};
+
+const navLinks: NavLink[] = [
   { href: "#servicios", label: "Soluciones", icon: <FaCarSide /> },
   { href: "#filosofia", label: "Nuestra Filosofía", icon: <FaBuilding /> },
-  {
-    href: "#ai-planner",
-    label: "Planificador ✨",
-    icon: <FaPlaneDeparture />,
-    highlight: true,
-  },
 ];
 
 export default function Navbar() {
@@ -66,6 +67,7 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <ModeToggle />
               <a
                 href="#contacto"
                 className="bg-corporate-900 text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-corporate-800 transition shadow-lg shadow-corporate-900/20"
@@ -147,6 +149,9 @@ export default function Navbar() {
 
         {/* CTA at the bottom */}
         <div className="px-4 pb-8">
+          <div className="flex justify-center mb-4" onClick={close}>
+            <ModeToggle />
+          </div>
           <a
             href="#contacto"
             onClick={close}
