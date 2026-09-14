@@ -174,12 +174,9 @@ export default function Navbar({
 
         {/* CTA at the bottom */}
         <div className="px-4 pb-8">
-          <div className="flex justify-center mb-4" onClick={close}>
+          <div className="flex flex-col items-center gap-3 mb-4" onClick={close}>
             <ModeToggle t={modeToggle} lang={lang} />
-            <LanguageSwitcher
-              ariaLabel={languageSwitcher.ariaLabel}
-              className="ml-2"
-            />
+            <LanguageSwitcher ariaLabel={languageSwitcher.ariaLabel} />
           </div>
           <a
             href="#contacto"

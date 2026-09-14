@@ -255,7 +255,7 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
               height={34}
               className="rounded-md"
             />
-            <div>
+            <div className="hidden sm:block">
               <span className="font-bold text-corporate-900 text-sm leading-tight block">
                 Tour Aventuras Pty
               </span>
