@@ -1,6 +1,8 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import ModeToggle from "@/components/ModeToggle";
+import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -233,7 +235,10 @@ function SectionHeader({
 
 /* ─── Page ─── */
 
-export default function TurismoPage() {
+export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo'>) {
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
+  const t = getDictionary(lang);
   const whatsapp = "https://wa.me/50765889209";
 
   return (
@@ -255,7 +260,7 @@ export default function TurismoPage() {
               </span>
             </div>
           </div>
-          <ModeToggle />
+          <ModeToggle t={t.modeToggle} lang={lang} />
         </div>
       </header>
 
