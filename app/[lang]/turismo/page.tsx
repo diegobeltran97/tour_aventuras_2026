@@ -246,7 +246,7 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
     <div className="min-h-screen bg-white font-sans">
       {/* ── Header ── */}
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-16 py-2 flex flex-wrap items-center justify-between gap-y-2">
           <div className="flex items-center gap-3">
             <Image
               src="/logo.jpg"
