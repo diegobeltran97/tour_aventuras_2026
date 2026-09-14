@@ -4,6 +4,7 @@
  * Client Components receive the strings they render as props.
  */
 import es from "./dictionaries/es.json";
+import en from "./dictionaries/en.json";
 import type { Locale } from "./config";
 
 /** The shape of a dictionary. es.json is the source of truth. */
@@ -17,8 +18,9 @@ export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale];
 }
 
-// `en` is added in Task 2. The Record annotation makes a missing key a build error.
+// The Record<Locale, Dictionary> annotation means a missing or mistyped key
+// in en.json is a compile error, not a silent runtime gap.
 const dictionaries: Record<Locale, Dictionary> = {
   es,
-  en: es,
+  en,
 };

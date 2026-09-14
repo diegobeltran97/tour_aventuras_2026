@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "siteName": "Tour Aventuras PTY",
+    "ogAlt": "Tour Aventuras PTY",
+    "home": {
+      "title": "Tour Aventuras PTY | Corporate Solutions",
+      "description": "End-to-end corporate mobility and logistics solutions in Panama."
+    },
+    "turismo": {
+      "title": "Panama Tours | Tour Aventuras PTY",
+      "description": "City tours, ecotourism, San Blas, Emberá and the Colón Free Zone. Discover Panama with professional local guides."
+    }
+  },
+  "nav": {
+    "brand": "Tour Aventuras",
+    "brandSuffix": "| Corporate",
+    "brandShort": "Tour Aventuras Pty",
+    "logoAlt": "Tour Aventuras PTY",
+    "links": { "services": "Solutions", "philosophy": "Our Philosophy" },
+    "cta": "Book a Meeting",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "location": "Panama City, Panama"
+  },
+  "modeToggle": {
+    "corporate": "Corporate",
+    "tourism": "Tourism",
+    "ariaLabel": "Switch between the corporate and tourism site"
+  },
+  "languageSwitcher": { "ariaLabel": "Change language" },
+  "hero": {
+    "badge": "B2B Logistics Division",
+    "title": {
+      "before": "End-to-End ",
+      "highlight": "Corporate Mobility & Logistics",
+      "after": " Solutions."
+    },
+    "subtitle": "We centralize your company's transfers, business travel and events in Panama. One provider, one consolidated invoice, and precision you can count on.",
+    "ctaPrimary": "Optimize My Costs",
+    "ctaSecondary": "Our Portfolio"
+  },
+  "clients": { "title": "Companies that trust our quality standards" },
+  "services": {
+    "eyebrow": "Our Portfolio",
+    "title": "Everything your company needs, in one place",
+    "subtitle": "Stop juggling multiple vendors. We cover the entire logistics chain for your staff and executives.",
+    "badge": "MOST REQUESTED",
+    "items": {
+      "mobility": {
+        "title": "Mobility & Transfers",
+        "description": "Spotless executive fleets, staff transport and professionally trained drivers. Absolute punctuality from the airport to the office.",
+        "features": ["Airport transfers (VIP)", "Staff shuttle routes", "Vehicles on standby"]
+      },
+      "travel": {
+        "title": "Travel Management (TMC)",
+        "description": "Corporate flight ticketing and hotel bookings at competitive rates. Full control over travel expenses.",
+        "features": ["Global flight tickets", "Negotiated hotel rates", "24/7 traveler assistance"]
+      },
+      "mice": {
+        "title": "MICE Logistics",
+        "description": "Support solutions for Meetings, Incentives, Conferences and Events. Seamless organization so you can focus on the content.",
+        "features": ["Conference coordination", "Incentive trips", "Guest logistics"]
+      }
+    }
+  },
+  "philosophy": {
+    "imageAlt": "Executives in Panama",
+    "title": { "before": "Your Business ", "highlight": "Partner in Panama." },
+    "intro": "We are the strategic partner for companies moving through Panama. We handle the full logistics of corporate travel — transfers, schedules and the unexpected — so your team can focus on what actually matters: closing deals.",
+    "pillars": {
+      "logistics": {
+        "title": "End-to-End Logistics",
+        "description": "We coordinate executive transfers, flight connections and schedules from a single point of contact. You delegate the operation; we run it without friction."
+      },
+      "management": {
+        "title": "Corporate Management",
+        "description": "One consolidated invoice and centralized reporting. Forget about coordinating multiple vendors — we give you full control and visibility over travel spend."
+      },
+      "support": {
+        "title": "Real 24/7 Support",
+        "description": "Flights get delayed and meetings run long. A dedicated team is available around the clock to resolve anything unexpected without disrupting your team."
+      }
+    }
+  },
+  "planner": {
+    "badge": "Direct Inquiry",
+    "title": "Corporate Logistics Planner",
+    "subtitle": "Describe the details of your next corporate trip or event and send us your request over WhatsApp. We'll reply with a tailored strategic proposal.",
+    "label": "Describe your requirement (e.g. 4 executives visiting for 3 days, hotel near Costa del Este and transport to 2 plants).",
+    "placeholder": "We have a delegation of...",
+    "button": "Send via WhatsApp"
+  },
+  "contact": {
+    "title": "Ready to optimize your company's logistics?",
+    "subtitle": "Book a free 15-minute logistics audit. We'll show you how companies like yours are already saving time and money.",
+    "fields": {
+      "name": { "label": "Name", "placeholder": "e.g. Carlos Mendoza" },
+      "company": { "label": "Company", "placeholder": "Your Company" },
+      "email": { "label": "Work Email", "placeholder": "carlos@company.com" },
+      "service": { "label": "Which service do you need to optimize?" }
+    },
+    "serviceOptions": [
+      "Transfers & Mobility",
+      "Travel Management (Tickets/Hotel)",
+      "Events & MICE Logistics",
+      "Full Review (Everything)"
+    ],
+    "submit": "Request a Sales Contact",
+    "demoAlert": "This is a demo. Email delivery will be connected here."
+  },
+  "footer": {
+    "brand": "Tour Aventuras Pty",
+    "brandSuffix": "| Corporate",
+    "logoAlt": "Tour Aventuras PTY",
+    "location": "Panama City, Panama"
+  },
+  "tourism": {
+    "logoAlt": "Tour Aventuras Pty",
+    "brand": "Tour Aventuras Pty",
+    "hero": {
+      "badge": "Tourism in Panama",
+      "title": { "before": "Discover Panama with ", "highlight": "Tour Aventuras Pty" },
+      "subtitle": "We are known for bringing out the cultural, natural and historical beauty of our country, turning every visit into a blend of feelings and experiences our guests carry home with them.",
+      "ctaWhatsapp": "Ask us on WhatsApp",
+      "ctaTours": "See all tours"
+    },
+    "stats": {
+      "daily": "Daily service",
+      "maxPassengers": "Max. passengers",
+      "toursAvailable": "Tours available",
+      "professionalGuides": "Professional guides"
+    },
+    "sections": {
+      "cityTours": {
+        "label": "City Tours",
+        "title": "Discover Panama City",
+        "description": "Daytime and nighttime tours through the capital's most iconic corners."
+      },
+      "ecoTours": {
+        "label": "Ecotourism & Nature",
+        "title": "Experience Panama's wild side",
+        "description": "Rainforest, rivers, island paradises and the Panama Canal in a single experience."
+      },
+      "shopping": {
+        "label": "Shopping",
+        "title": "Colón Free Zone",
+        "description": "The second-largest free trade zone in the world, in the Western Hemisphere."
+      }
+    },
+    "includesLabel": "Includes",
+    "tours": {
+      "city_tour": {
+        "name": "Panama City Tour",
+        "duration": "4–6 hours",
+        "description": "Spend half a day with us exploring the history and the modern life of a city shaped by so many cultures, old and new.",
+        "includes": [
+          "A/C transport + water and snacks",
+          "Modern city: Cinta Costera, Balboa Theater, Canal Administration Building",
+          "Casco Antiguo, the old quarter: Metropolitan Cathedral, Golden Altar Church, Puente de los Enamorados",
+          "Panama Canal and Canal Museum",
+          "Amador Duty Free (Causeway) and Albrook Mall",
+          "Guide"
+        ],
+        "note": null
+      },
+      "city_tour_night": {
+        "name": "Panama City Night Tour",
+        "duration": "Evening",
+        "description": "Discover a magical spot by the sea where you can take in the Panama City skyline on a warm, history-filled night.",
+        "includes": ["Transport", "Walk through Casco Antiguo", "Amador Causeway", "Guide"],
+        "note": null
+      },
+      "nightlife": {
+        "name": "Night Tour — Nightlife",
+        "duration": "Evening",
+        "description": "One of the most popular destinations for locals and visitors alike in Panama City, thanks to its variety of food, drinks of every style and nightclubs.",
+        "includes": [
+          "One-way transfer to Casco Antiguo",
+          "Visit to 7 bars",
+          "6 cocktails included",
+          "Nachos starter"
+        ],
+        "note": null
+      },
+      "gamboa": {
+        "name": "Monkey Island — Gamboa",
+        "duration": "Half day",
+        "description": "Head out onto the waters of Gatún Lake by boat and discover Panama's astonishing biodiversity. Spot monkeys, sloths, caimans and hundreds of tropical birds in their natural habitat while navigating the highest point of the Panama Canal.",
+        "includes": [
+          "A/C ground transport",
+          "Boat ride across Gatún Lake",
+          "Monkey, sloth and tropical bird watching",
+          "Fresh fruit and water",
+          "Naturalist guide"
+        ],
+        "note": null
+      },
+      "san_blas": {
+        "name": "San Blas",
+        "duration": "Full day",
+        "description": "Time stands still in the heartland of Guna culture, a place of white sand and crystal-clear water. Visit 3 islands: Isla Perro Chico, Isla Wailidub and the Natural Pools.",
+        "includes": [
+          "Lunch and drinks",
+          "Ground transport",
+          "Boat transport",
+          "Comarca (indigenous territory) fees"
+        ],
+        "note": null
+      },
+      "embera": {
+        "name": "Emberá — Indigenous Community",
+        "duration": "6–8 hours",
+        "description": "Take in the biodiversity as you travel up the Chagres River, and share in the roots and traditions of the Emberá indigenous community.",
+        "includes": [
+          "Ground transport",
+          "Motorized dugout canoe ride",
+          "Traditional Emberá lunch",
+          "Fruit snack",
+          "Waterfall visit (weather permitting)"
+        ],
+        "note": "Minimum 2 people"
+      },
+      "transito": {
+        "name": "Partial Transit — Panama Canal",
+        "duration": "6–8 hours",
+        "description": "Experience the Panama Canal aboard a ferry along its historic waterway. Take in this engineering marvel and see how it works.",
+        "includes": [
+          "Hotel–port transport (round trip)",
+          "Guide",
+          "Breakfast and lunch",
+          "Snacks"
+        ],
+        "note": null
+      },
+      "zona_libre": {
+        "name": "Colón Free Zone",
+        "duration": "Full day",
+        "description": "Considered the second-largest free trade zone in the world and the first in the Western Hemisphere. Famous for unlimited, tax-free shopping: electronics, liquor, furniture, clothing, shoes, jewelry, watches and perfumes from the most renowned brands.",
+        "includes": [
+          "Round-trip transfer to the Colón Free Zone",
+          "Guide",
+          "Bottle of water"
+        ],
+        "note": null
+      }
+    },
+    "cta": {
+      "title": "Ready to live the experience?",
+      "subtitle": "Get in touch and we'll design the perfect itinerary for you or your group, with no hidden costs.",
+      "emailLabel": "Email",
+      "book": "Book my tour now",
+      "corporateQuestion": "Are you a business?",
+      "corporateLink": "See corporate solutions →"
+    },
+    "footer": { "location": "Panama City" }
+  }
+}
