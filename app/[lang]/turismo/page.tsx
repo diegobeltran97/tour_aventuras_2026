@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ModeToggle from "@/components/ModeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import {
   FaWhatsapp,
@@ -260,7 +261,10 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
               </span>
             </div>
           </div>
-          <ModeToggle t={t.modeToggle} lang={lang} />
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher ariaLabel={t.languageSwitcher.ariaLabel} />
+            <ModeToggle t={t.modeToggle} lang={lang} />
+          </div>
         </div>
       </header>
 
