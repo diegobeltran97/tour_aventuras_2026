@@ -23,14 +23,14 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
         lang={lang}
       />
       <main>
-        <HeroSection />
-        <ClientsSection />
-        <ServicesSection />
-        <PhilosophySection />
-        <AIPlannerSection />
-        <ContactSection />
+        <HeroSection t={t.hero} />
+        <ClientsSection t={t.clients} />
+        <ServicesSection t={t.services} />
+        <PhilosophySection t={t.philosophy} />
+        <AIPlannerSection t={t.planner} />
+        <ContactSection t={t.contact} />
       </main>
-      <Footer />
+      <Footer t={t.footer} />
     </>
   );
 }
