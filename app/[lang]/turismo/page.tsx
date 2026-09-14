@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import ModeToggle from "../../components/ModeToggle";
+import ModeToggle from "@/components/ModeToggle";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -15,12 +15,12 @@ import {
   FaShip,
   FaMapLocationDot,
 } from "react-icons/fa6";
-import embera from "../../public/embera/embera.jpg";
-import sanblas from "../../public/san_blass/san_blass.jpg";
-import gamboa from "../../public/gamboa/gamboa.jpg";
-import transito from "../../public/transito/transito.jpeg";
-import zonafree from "../../public/zona_libre/zona_free.jpg";
-import cityTour from "../../public/city_tour/city_tour.jpg";
+import embera from "@/public/embera/embera.jpg";
+import sanblas from "@/public/san_blass/san_blass.jpg";
+import gamboa from "@/public/gamboa/gamboa.jpg";
+import transito from "@/public/transito/transito.jpeg";
+import zonafree from "@/public/zona_libre/zona_free.jpg";
+import cityTour from "@/public/city_tour/city_tour.jpg";
 
 /* ─── Tour data from brochure ─── */
 
