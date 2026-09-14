@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "siteName": "Tour Aventuras PTY",
+    "ogAlt": "Tour Aventuras PTY",
+    "home": {
+      "title": "Tour Aventuras PTY | Soluciones Corporativas",
+      "description": "Soluciones Integrales de Movilidad y Logística Corporativa en Panamá"
+    },
+    "turismo": {
+      "title": "Tours en Panamá | Tour Aventuras PTY",
+      "description": "City tours, ecoturismo, San Blas, Emberá y Zona Libre de Colón. Descubre Panamá con guías locales profesionales."
+    }
+  },
+  "nav": {
+    "brand": "Tour Aventuras",
+    "brandSuffix": "| Corporativo",
+    "brandShort": "Tour Aventuras Pty",
+    "logoAlt": "Tour Aventuras PTY",
+    "links": { "services": "Soluciones", "philosophy": "Nuestra Filosofía" },
+    "cta": "Agendar Reunión",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "location": "Ciudad de Panamá, Panamá"
+  },
+  "modeToggle": {
+    "corporate": "Corporativo",
+    "tourism": "Turismo",
+    "ariaLabel": "Cambiar entre sitio corporativo y turismo"
+  },
+  "languageSwitcher": { "ariaLabel": "Cambiar idioma" },
+  "hero": {
+    "badge": "División B2B Logística",
+    "title": {
+      "before": "Soluciones Integrales de ",
+      "highlight": "Movilidad y Logística",
+      "after": " Corporativa."
+    },
+    "subtitle": "Centralizamos los traslados, viajes y eventos de su empresa en Panamá. Un solo proveedor, facturación consolidada y precisión garantizada.",
+    "ctaPrimary": "Optimizar Mis Costos",
+    "ctaSecondary": "Nuestro Portafolio"
+  },
+  "clients": { "title": "Empresas que confían en nuestros estándares de calidad" },
+  "services": {
+    "eyebrow": "Nuestro Portafolio",
+    "title": "Todo lo que su empresa necesita, en un solo lugar",
+    "subtitle": "Elimine la fricción de gestionar múltiples proveedores. Cubrimos toda la cadena logística de su personal y ejecutivos.",
+    "badge": "MÁS SOLICITADO",
+    "items": {
+      "mobility": {
+        "title": "Movilidad y Traslados",
+        "description": "Flotas ejecutivas impecables, transporte de personal y choferes capacitados. Puntualidad absoluta desde el aeropuerto hasta la oficina.",
+        "features": ["Traslados Aeropuerto (VIP)", "Rutas para personal", "Vehículos a disposición"]
+      },
+      "travel": {
+        "title": "Gestión de Viajes (TMC)",
+        "description": "Emisión de tiquetes aéreos corporativos y reservas de hospedaje con tarifas competitivas. Control total de viáticos.",
+        "features": ["Tiquetes aéreos globales", "Convenios hoteleros", "Asistencia 24/7 a viajeros"]
+      },
+      "mice": {
+        "title": "Logística MICE",
+        "description": "Soluciones de apoyo para Reuniones, Incentivos, Conferencias y Eventos. Organización fluida para que usted se enfoque en el contenido.",
+        "features": ["Coordinación de Congresos", "Viajes de incentivo", "Logística de invitados"]
+      }
+    }
+  },
+  "philosophy": {
+    "imageAlt": "Ejecutivos en Panamá",
+    "title": { "before": "Su Aliado ", "highlight": "de Negocios en Panamá." },
+    "intro": "Somos el socio estratégico de las empresas que se mueven por Panamá. Nos encargamos de toda la logística del viaje corporativo —traslados, agendas e imprevistos— para que su equipo se concentre en lo que realmente importa: cerrar negocios.",
+    "pillars": {
+      "logistics": {
+        "title": "Logística Integral",
+        "description": "Coordinamos traslados ejecutivos, conexiones aéreas y agendas desde un único punto de contacto. Usted delega la operación; nosotros la ejecutamos sin fricciones."
+      },
+      "management": {
+        "title": "Gestión Corporativa",
+        "description": "Una sola factura consolidada y reportes centralizados. Olvídese de coordinar múltiples proveedores: le damos control y visibilidad total del gasto de viaje."
+      },
+      "support": {
+        "title": "Soporte Real 24/7",
+        "description": "Los vuelos se retrasan y las reuniones se extienden. Un equipo dedicado está disponible las 24 horas para resolver cualquier imprevisto sin afectar a su equipo."
+      }
+    }
+  },
+  "planner": {
+    "badge": "Consulta Directa",
+    "title": "Planificador de Logística Corporativa",
+    "subtitle": "Describa los detalles de su próximo viaje o evento corporativo y envíenos su requerimiento por WhatsApp. Le responderemos con una propuesta estratégica personalizada.",
+    "label": "Describa su requerimiento (Ej: Visita de 4 directivos por 3 días, hotel cerca de Costa del Este y transporte a 2 plantas).",
+    "placeholder": "Tenemos una delegación de...",
+    "button": "Enviar por WhatsApp"
+  },
+  "contact": {
+    "title": "¿Listo para optimizar la logística de su empresa?",
+    "subtitle": "Agende una auditoría logística gratuita de 15 minutos. Le mostraremos cómo empresas como la suya ya están ahorrando tiempo y dinero.",
+    "fields": {
+      "name": { "label": "Nombre", "placeholder": "Ej. Carlos Mendoza" },
+      "company": { "label": "Empresa", "placeholder": "Su Empresa" },
+      "email": { "label": "Correo Corporativo", "placeholder": "carlos@empresa.com" },
+      "service": { "label": "¿Qué servicio requiere optimizar?" }
+    },
+    "serviceOptions": [
+      "Traslados y Movilidad",
+      "Gestión de Viajes (Tickets/Hotel)",
+      "Eventos y Logística MICE",
+      "Revisión Integral (Todo)"
+    ],
+    "submit": "Solicitar Contacto Comercial",
+    "demoAlert": "Esta es una demostración. Aquí se conectará el envío a tu correo."
+  },
+  "footer": {
+    "brand": "Tour Aventuras Pty",
+    "brandSuffix": "| Corporate",
+    "logoAlt": "Tour Aventuras PTY",
+    "location": "Ciudad de Panamá, Panamá"
+  },
+  "tourism": {
+    "logoAlt": "Tour Aventuras Pty",
+    "brand": "Tour Aventuras Pty",
+    "hero": {
+      "badge": "Turismo en Panamá",
+      "title": { "before": "Descubre Panamá con ", "highlight": "Tour Aventuras Pty" },
+      "subtitle": "Nos destacamos por realzar la belleza cultural, natural e histórica de nuestro hermoso país, convirtiendo cada visita en una mezcla de sensaciones y experiencias que perdurarán en los recuerdos de nuestros visitantes.",
+      "ctaWhatsapp": "Consultar por WhatsApp",
+      "ctaTours": "Ver todos los tours"
+    },
+    "stats": {
+      "daily": "Servicio diario",
+      "maxPassengers": "Pasajeros máx.",
+      "toursAvailable": "Tours disponibles",
+      "professionalGuides": "Guías profesionales"
+    },
+    "sections": {
+      "cityTours": {
+        "label": "City Tours",
+        "title": "Descubre la Ciudad de Panamá",
+        "description": "Tours diurnos y nocturnos por los rincones más icónicos de la capital."
+      },
+      "ecoTours": {
+        "label": "Ecoturismo & Naturaleza",
+        "title": "Vive la naturaleza panameña",
+        "description": "Selva tropical, ríos, islas paradisíacas y el Canal de Panamá en una sola experiencia."
+      },
+      "shopping": {
+        "label": "Compras",
+        "title": "Zona Libre de Colón",
+        "description": "La segunda zona franca más grande del mundo, en el hemisferio occidental."
+      }
+    },
+    "includesLabel": "Incluye",
+    "tours": {
+      "city_tour": {
+        "name": "City Tour por la Ciudad de Panamá",
+        "duration": "4–6 horas",
+        "description": "Comparte un medio día con nosotros conociendo la historia y lo contemporáneo de una ciudad con tan variadas culturas históricas y modernas.",
+        "includes": [
+          "Transporte A/C + agua y snacks",
+          "Ciudad contemporánea: Cinta Costera, Teatro Balboa, Admin. del Canal",
+          "Casco Antiguo: Catedral Metropolitana, Iglesia del Altar de Oro, Puente de los Enamorados",
+          "Canal de Panamá y Museo del Canal",
+          "Duty Free de Amador (Causeway) y Albrook Mall",
+          "Guía"
+        ],
+        "note": null
+      },
+      "city_tour_night": {
+        "name": "City Tour Nocturno",
+        "duration": "Noche",
+        "description": "Conoce un lugar mágico junto al mar donde puedes observar la Ciudad de Panamá, disfrutando de una noche cálida e histórica.",
+        "includes": ["Transporte", "Paseo por el Casco Antiguo", "Calzada de Amador", "Guía"],
+        "note": null
+      },
+      "nightlife": {
+        "name": "Tour Nocturno — Vida Nocturna",
+        "duration": "Noche",
+        "description": "Uno de los destinos más visitados por residentes y turistas en Ciudad de Panamá debido a la variedad gastronómica, bebidas de diferentes estilos y discotecas.",
+        "includes": [
+          "Traslado de ida al Casco Antiguo",
+          "Visita a 7 bares",
+          "6 cócteles incluidos",
+          "Entrada de nachos"
+        ],
+        "note": null
+      },
+      "gamboa": {
+        "name": "Isla de los Monos — Gamboa",
+        "duration": "Medio día",
+        "description": "Adéntrate en las aguas del Lago Gatún a bordo de una lancha y descubre la asombrosa biodiversidad panameña. Observa monos, perezosos, caimanes y cientos de aves tropicales en su entorno natural, navegando por el punto más elevado del Canal de Panamá.",
+        "includes": [
+          "Transporte terrestre A/C",
+          "Traslado en lancha por Lago Gatún",
+          "Avistamiento de monos, perezosos y aves tropicales",
+          "Fruta fresca y agua",
+          "Guía naturalista"
+        ],
+        "note": null
+      },
+      "san_blas": {
+        "name": "San Blas",
+        "duration": "Todo el día",
+        "description": "El tiempo se detiene en las raíces de la cultura Guna, en un lugar de arena blanca y aguas cristalinas. Visita 3 islas: Isla Perro Chico, Isla Wailidub y Piscinas Naturales.",
+        "includes": [
+          "Almuerzo y bebidas",
+          "Transporte terrestre",
+          "Transporte acuático",
+          "Impuestos comarcales"
+        ],
+        "note": null
+      },
+      "embera": {
+        "name": "Emberá — Comunidad Indígena",
+        "duration": "6–8 horas",
+        "description": "Disfruta de la biodiversidad navegando por el Río Chagres, comparte y convive a través de las raíces y tradiciones de la comunidad indígena Emberá.",
+        "includes": [
+          "Transporte terrestre",
+          "Paseo en piragua a motor",
+          "Almuerzo tradicional Emberá",
+          "Merienda de fruta",
+          "Visita a la cascada (según clima)"
+        ],
+        "note": "Mínimo 2 personas"
+      },
+      "transito": {
+        "name": "Tránsito Parcial — Canal de Panamá",
+        "duration": "6–8 horas",
+        "description": "Vive el Canal de Panamá navegando a bordo de un ferry por su histórico cauce. Admira esta maravilla de la ingeniería y su funcionamiento.",
+        "includes": [
+          "Transporte hotel–puerto (ida y vuelta)",
+          "Guía",
+          "Desayuno y almuerzo",
+          "Snacks"
+        ],
+        "note": null
+      },
+      "zona_libre": {
+        "name": "Zona Libre de Colón",
+        "duration": "Todo el día",
+        "description": "Considerada la segunda zona franca más grande del mundo y la primera en el hemisferio occidental. Famosa por compras sin límite y libre de impuestos: electrónicos, licores, muebles, ropa, zapatos, joyas, relojes y perfumes de las marcas más afamadas.",
+        "includes": [
+          "Traslado ida y vuelta a la Zona Franca de Colón",
+          "Guía",
+          "Botella de agua"
+        ],
+        "note": null
+      }
+    },
+    "cta": {
+      "title": "¿Listo para vivir la experiencia?",
+      "subtitle": "Contáctanos y diseñamos el itinerario perfecto para ti o tu grupo, sin costos ocultos.",
+      "emailLabel": "Correo",
+      "book": "Reservar mi tour ahora",
+      "corporateQuestion": "¿Eres empresa?",
+      "corporateLink": "Ver soluciones corporativas →"
+    },
+    "footer": { "location": "Ciudad de Panamá" }
+  }
+}
