@@ -3,6 +3,8 @@
 import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import ModeToggle from "./ModeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { type Locale } from "@/i18n/config";
 import {
   FaBars,
   FaXmark,
@@ -18,13 +20,35 @@ type NavLink = {
   highlight?: boolean;
 };
 
-const navLinks: NavLink[] = [
-  { href: "#servicios", label: "Soluciones", icon: <FaCarSide /> },
-  { href: "#filosofia", label: "Nuestra Filosofía", icon: <FaBuilding /> },
-];
+type NavbarDict = {
+  brand: string;
+  brandSuffix: string;
+  brandShort: string;
+  logoAlt: string;
+  links: { services: string; philosophy: string };
+  cta: string;
+  openMenu: string;
+  closeMenu: string;
+  location: string;
+};
 
-export default function Navbar() {
+export default function Navbar({
+  t,
+  modeToggle,
+  languageSwitcher,
+  lang,
+}: {
+  t: NavbarDict;
+  modeToggle: { corporate: string; tourism: string; ariaLabel: string };
+  languageSwitcher: { ariaLabel: string };
+  lang: Locale;
+}) {
   const [open, setOpen] = useState(false);
+
+  const navLinks: NavLink[] = [
+    { href: "#servicios", label: t.links.services, icon: <FaCarSide /> },
+    { href: "#filosofia", label: t.links.philosophy, icon: <FaBuilding /> },
+  ];
 
   function close() {
     setOpen(false);
@@ -39,15 +63,15 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Image
                 src="/logo_final.png"
-                alt="Tour Aventuras PTY"
+                alt={t.logoAlt}
                 width={48}
                 height={38}
                 className="rounded-md"
               />
               <span className="font-bold text-xl tracking-tight text-corporate-900">
-                Tour Aventuras
+                {t.brand}
                 <span className="font-light text-corporate-500">
-                  | Corporativo
+                  {t.brandSuffix}
                 </span>
               </span>
             </div>
@@ -67,12 +91,13 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <ModeToggle />
+              <LanguageSwitcher ariaLabel={languageSwitcher.ariaLabel} />
+              <ModeToggle t={modeToggle} lang={lang} />
               <a
                 href="#contacto"
                 className="bg-corporate-900 text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-corporate-800 transition shadow-lg shadow-corporate-900/20"
               >
-                Agendar Reunión
+                {t.cta}
               </a>
             </div>
 
@@ -80,7 +105,7 @@ export default function Navbar() {
             <button
               className="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-corporate-900 hover:bg-gray-100 transition"
               onClick={() => setOpen(true)}
-              aria-label="Abrir menú"
+              aria-label={t.openMenu}
             >
               <FaBars className="text-xl" />
             </button>
@@ -110,19 +135,19 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <Image
               src="/logo.jpg"
-              alt="Tour Aventuras PTY"
+              alt={t.logoAlt}
               width={36}
               height={28}
               className="rounded-md"
             />
             <span className="font-bold text-corporate-900 tracking-tight">
-              Tour Aventuras Pty
+              {t.brandShort}
             </span>
           </div>
           <button
             onClick={close}
             className="flex items-center justify-center w-9 h-9 rounded-md text-gray-500 hover:bg-gray-100 transition"
-            aria-label="Cerrar menú"
+            aria-label={t.closeMenu}
           >
             <FaXmark className="text-xl" />
           </button>
@@ -149,18 +174,19 @@ export default function Navbar() {
 
         {/* CTA at the bottom */}
         <div className="px-4 pb-8">
-          <div className="flex justify-center mb-4" onClick={close}>
-            <ModeToggle />
+          <div className="flex flex-col items-center gap-3 mb-4" onClick={close}>
+            <ModeToggle t={modeToggle} lang={lang} />
+            <LanguageSwitcher ariaLabel={languageSwitcher.ariaLabel} />
           </div>
           <a
             href="#contacto"
             onClick={close}
             className="flex items-center justify-center gap-2 w-full bg-corporate-900 text-white px-5 py-3.5 rounded-xl text-sm font-semibold hover:bg-corporate-800 transition shadow-lg shadow-corporate-900/20"
           >
-            <FaCalendarCheck /> Agendar Reunión
+            <FaCalendarCheck /> {t.cta}
           </a>
           <p className="text-center text-xs text-gray-400 mt-4">
-            Ciudad de Panamá, Panamá
+            {t.location}
           </p>
         </div>
       </aside>

@@ -1,19 +1,20 @@
 import Image from "next/image";
 import { FaLinkedin, FaInstagram } from "react-icons/fa6";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-export default function Footer() {
+export default function Footer({ t }: { t: Dictionary["footer"] }) {
   return (
     <footer className="bg-corporate-900 border-t border-gray-800 pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-400">
         <div className="flex items-center gap-2">
-          <Image src="/logo.jpg" alt="Tour Aventuras PTY" width={36} height={28} className="rounded brightness-110" />
+          <Image src="/logo.jpg" alt={t.logoAlt} width={36} height={28} className="rounded brightness-110" />
           <span className="font-bold text-white tracking-tight">
-            Tour Aventuras Pty{" "}
-            <span className="font-light text-corporate-500">| Corporate</span>
+            {t.brand}{" "}
+            <span className="font-light text-corporate-500">{t.brandSuffix}</span>
           </span>
         </div>
         <div className="text-sm">
-          Ciudad de Panamá, Panamá | contacto@touraventuraspty.com | +507 6588-9209
+          {t.location} | contacto@touraventuraspty.com | +507 6588-9209
         </div>
         <div className="flex gap-4">
           <a
