@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import ModeToggle from "@/components/ModeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
+import type { Dictionary } from "@/i18n/dictionaries";
+import { localizedPath } from "@/i18n/config";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -25,145 +27,44 @@ import transito from "@/public/transito/transito.jpeg";
 import zonafree from "@/public/zona_libre/zona_free.jpg";
 import cityTour from "@/public/city_tour/city_tour.jpg";
 
-/* ─── Tour data from brochure ─── */
+/* ─── Tour images (content lives in the dictionaries) ─── */
 
-const cityTours = [
-  {
-    name: "City Tour por la Ciudad de Panamá",
-    image: cityTour,
-    duration: "4–6 horas",
-    description:
-      "Comparte un medio día con nosotros conociendo la historia y lo contemporáneo de una ciudad con tan variadas culturas históricas y modernas.",
-    includes: [
-      "Transporte A/C + agua y snacks",
-      "Ciudad contemporánea: Cinta Costera, Teatro Balboa, Admin. del Canal",
-      "Casco Antiguo: Catedral Metropolitana, Iglesia del Altar de Oro, Puente de los Enamorados",
-      "Canal de Panamá y Museo del Canal",
-      "Duty Free de Amador (Causeway) y Albrook Mall",
-      "Guía",
-    ],
-  },
-  {
-    name: "City Tour Nocturno",
-    image: "/city_tour_night.jpeg",
-    duration: "Noche",
-    description:
-      "Conoce un lugar mágico junto al mar donde puedes observar la Ciudad de Panamá, disfrutando de una noche cálida e histórica.",
-    includes: [
-      "Transporte",
-      "Paseo por el Casco Antiguo",
-      "Calzada de Amador",
-      "Guía",
-    ],
-  },
-  {
-    name: "Tour Nocturno — Vida Nocturna",
-    image:
-      "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop",
-    duration: "Noche",
-    description:
-      "Uno de los destinos más visitados por residentes y turistas en Ciudad de Panamá debido a la variedad gastronómica, bebidas de diferentes estilos y discotecas.",
-    includes: [
-      "Traslado de ida al Casco Antiguo",
-      "Visita a 7 bares",
-      "6 cócteles incluidos",
-      "Entrada de nachos",
-    ],
-  },
-];
+type TourId = keyof Dictionary["tourism"]["tours"];
 
-const ecoTours = [
-  {
-    name: "Isla de los Monos — Gamboa",
-    image: gamboa,
-    duration: "Medio día",
-    description:
-      "Adéntrate en las aguas del Lago Gatún a bordo de una lancha y descubre la asombrosa biodiversidad panameña. Observa monos, perezosos, caimanes y cientos de aves tropicales en su entorno natural, navegando por el punto más elevado del Canal de Panamá.",
-    includes: [
-      "Transporte terrestre A/C",
-      "Traslado en lancha por Lago Gatún",
-      "Avistamiento de monos, perezosos y aves tropicales",
-      "Fruta fresca y agua",
-      "Guía naturalista",
-    ],
-    note: null,
-  },
-  {
-    name: "San Blas",
-    image: sanblas,
-    duration: "Todo el día",
-    description:
-      "El tiempo se detiene en las raíces de la cultura Guna, en un lugar de arena blanca y aguas cristalinas. Visita 3 islas: Isla Perro Chico, Isla Wailidub y Piscinas Naturales.",
-    includes: [
-      "Almuerzo y bebidas",
-      "Transporte terrestre",
-      "Transporte acuático",
-      "Impuestos comarcales",
-    ],
-    note: null,
-  },
-  {
-    name: "Emberá — Comunidad Indígena",
-    image: embera,
-    duration: "6–8 horas",
-    description:
-      "Disfruta de la biodiversidad navegando por el Río Chagres, comparte y convive a través de las raíces y tradiciones de la comunidad indígena Emberá.",
-    includes: [
-      "Transporte terrestre",
-      "Paseo en piragua a motor",
-      "Almuerzo tradicional Emberá",
-      "Merienda de fruta",
-      "Visita a la cascada (según clima)",
-    ],
-    note: "Mínimo 2 personas",
-  },
-  {
-    name: "Tránsito Parcial — Canal de Panamá",
-    image: transito,
-    duration: "6–8 horas",
-    description:
-      "Vive el Canal de Panamá navegando a bordo de un ferry por su histórico cauce. Admira esta maravilla de la ingeniería y su funcionamiento.",
-    includes: [
-      "Transporte hotel–puerto (ida y vuelta)",
-      "Guía",
-      "Desayuno y almuerzo",
-      "Snacks",
-    ],
-    note: null,
-  },
-];
-
-const shoppingTour = {
-  name: "Zona Libre de Colón",
-  image: zonafree,
-  duration: "Todo el día",
-  description:
-    "Considerada la segunda zona franca más grande del mundo y la primera en el hemisferio occidental. Famosa por compras sin límite y libre de impuestos: electrónicos, licores, muebles, ropa, zapatos, joyas, relojes y perfumes de las marcas más afamadas.",
-  includes: [
-    "Traslado ida y vuelta a la Zona Franca de Colón",
-    "Guía",
-    "Botella de agua",
-  ],
+const tourImages: Record<TourId, string | StaticImageData> = {
+  city_tour: cityTour,
+  city_tour_night: "/city_tour_night.jpeg",
+  nightlife:
+    "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop",
+  gamboa: gamboa,
+  san_blas: sanblas,
+  embera: embera,
+  transito: transito,
+  zona_libre: zonafree,
 };
+
+const cityTourIds: TourId[] = ["city_tour", "city_tour_night", "nightlife"];
+const ecoTourIds: TourId[] = ["gamboa", "san_blas", "embera", "transito"];
 
 /* ─── Card components ─── */
 
 function TourCard({
   tour,
+  image,
+  includesLabel,
   icon,
 }: {
-  tour: Omit<(typeof cityTours)[0], "image"> & {
-    image: string | StaticImageData;
-    note?: string | null;
-  };
+  tour: Dictionary["tourism"]["tours"][TourId];
+  image: string | StaticImageData;
+  includesLabel: string;
   icon: React.ReactNode;
 }) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col group">
-      {tour.image && (
+      {image && (
         <div className="h-48 overflow-hidden">
           <img
-            src={typeof tour.image === "string" ? tour.image : tour.image.src}
+            src={typeof image === "string" ? image : image.src}
             alt={tour.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
@@ -186,7 +87,7 @@ function TourCard({
         </p>
         <div className="border-t border-gray-100 pt-4">
           <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">
-            Incluye
+            {includesLabel}
           </p>
           <ul className="space-y-1.5">
             {tour.includes.map((item) => (
@@ -250,14 +151,14 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
           <div className="flex items-center gap-3">
             <Image
               src="/logo.jpg"
-              alt="Tour Aventuras Pty"
+              alt={t.tourism.logoAlt}
               width={44}
               height={34}
               className="rounded-md"
             />
             <div className="hidden sm:block">
               <span className="font-bold text-corporate-900 text-sm leading-tight block">
-                Tour Aventuras Pty
+                {t.tourism.brand}
               </span>
             </div>
           </div>
@@ -280,19 +181,16 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-corporate-400 text-sm font-semibold mb-6">
-              <FaMapLocationDot /> Turismo en Panamá
+              <FaMapLocationDot /> {t.tourism.hero.badge}
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5">
-              Descubre Panamá con{" "}
+              {t.tourism.hero.title.before}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-corporate-400 to-accent-500">
-                Tour Aventuras Pty
+                {t.tourism.hero.title.highlight}
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed font-light">
-              Nos destacamos por realzar la belleza cultural, natural e
-              histórica de nuestro hermoso país, convirtiendo cada visita en una
-              mezcla de sensaciones y experiencias que perdurarán en los
-              recuerdos de nuestros visitantes.
+              {t.tourism.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -301,13 +199,13 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-accent-500 hover:opacity-90 text-white px-7 py-3.5 rounded-md font-semibold text-base transition shadow-lg"
               >
-                <FaWhatsapp className="text-lg" /> Consultar por WhatsApp
+                <FaWhatsapp className="text-lg" /> {t.tourism.hero.ctaWhatsapp}
               </a>
               <a
                 href="#tours"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 px-7 py-3.5 rounded-md font-semibold text-base hover:bg-white/20 transition backdrop-blur-sm"
               >
-                Ver todos los tours
+                {t.tourism.hero.ctaTours}
               </a>
             </div>
           </div>
@@ -319,10 +217,10 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "24/7", label: "Servicio diario" },
-              { value: "150", label: "Pasajeros máx." },
-              { value: "8+", label: "Tours disponibles" },
-              { value: "100%", label: "Guías profesionales" },
+              { value: "24/7", label: t.tourism.stats.daily },
+              { value: "150", label: t.tourism.stats.maxPassengers },
+              { value: "8+", label: t.tourism.stats.toursAvailable },
+              { value: "100%", label: t.tourism.stats.professionalGuides },
             ].map((s) => (
               <div key={s.label}>
                 <p className="text-2xl font-extrabold text-corporate-400">
@@ -342,13 +240,19 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             icon={<FaCity />}
-            label="City Tours"
-            title="Descubre la Ciudad de Panamá"
-            description="Tours diurnos y nocturnos por los rincones más icónicos de la capital."
+            label={t.tourism.sections.cityTours.label}
+            title={t.tourism.sections.cityTours.title}
+            description={t.tourism.sections.cityTours.description}
           />
           <div className="grid md:grid-cols-3 gap-7">
-            {cityTours.map((t) => (
-              <TourCard key={t.name} tour={t} icon={<FaCity />} />
+            {cityTourIds.map((id) => (
+              <TourCard
+                key={id}
+                tour={t.tourism.tours[id]}
+                image={tourImages[id]}
+                includesLabel={t.tourism.includesLabel}
+                icon={<FaCity />}
+              />
             ))}
           </div>
         </div>
@@ -359,13 +263,19 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             icon={<FaLeaf />}
-            label="Ecoturismo & Naturaleza"
-            title="Vive la naturaleza panameña"
-            description="Selva tropical, ríos, islas paradisíacas y el Canal de Panamá en una sola experiencia."
+            label={t.tourism.sections.ecoTours.label}
+            title={t.tourism.sections.ecoTours.title}
+            description={t.tourism.sections.ecoTours.description}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-7">
-            {ecoTours.map((t) => (
-              <TourCard key={t.name} tour={t} icon={<FaLeaf />} />
+            {ecoTourIds.map((id) => (
+              <TourCard
+                key={id}
+                tour={t.tourism.tours[id]}
+                image={tourImages[id]}
+                includesLabel={t.tourism.includesLabel}
+                icon={<FaLeaf />}
+              />
             ))}
           </div>
         </div>
@@ -376,15 +286,19 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             icon={<FaShip />}
-            label="Compras"
-            title="Zona Libre de Colón"
-            description="La segunda zona franca más grande del mundo, en el hemisferio occidental."
+            label={t.tourism.sections.shopping.label}
+            title={t.tourism.sections.shopping.title}
+            description={t.tourism.sections.shopping.description}
           />
           <div className="bg-white rounded-2xl shadow-sm border border-corporate-100 overflow-hidden">
             <div className="h-56 overflow-hidden">
               <img
-                src={shoppingTour.image.src}
-                alt={shoppingTour.name}
+                src={
+                  typeof tourImages.zona_libre === "string"
+                    ? tourImages.zona_libre
+                    : tourImages.zona_libre.src
+                }
+                alt={t.tourism.tours.zona_libre.name}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -395,21 +309,22 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                   <h3 className="text-2xl font-bold text-corporate-900">
-                    {shoppingTour.name}
+                    {t.tourism.tours.zona_libre.name}
                   </h3>
                   <span className="inline-flex items-center gap-1 text-xs font-semibold text-corporate-500 bg-corporate-50 px-2 py-1 rounded-full">
-                    <FaClock className="text-[10px]" /> {shoppingTour.duration}
+                    <FaClock className="text-[10px]" />{" "}
+                    {t.tourism.tours.zona_libre.duration}
                   </span>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  {shoppingTour.description}
+                  {t.tourism.tours.zona_libre.description}
                 </p>
                 <div>
                   <p className="text-xs font-bold text-gray-400 uppercase tracking-wide mb-3">
-                    Incluye
+                    {t.tourism.includesLabel}
                   </p>
                   <ul className="flex flex-wrap gap-3">
-                    {shoppingTour.includes.map((item) => (
+                    {t.tourism.tours.zona_libre.includes.map((item) => (
                       <li
                         key={item}
                         className="flex items-center gap-2 text-sm text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg"
@@ -437,11 +352,10 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
         />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            ¿Listo para vivir la experiencia?
+            {t.tourism.cta.title}
           </h2>
           <p className="text-corporate-400 text-lg mb-10 font-light max-w-xl mx-auto">
-            Contáctanos y diseñamos el itinerario perfecto para ti o tu grupo,
-            sin costos ocultos.
+            {t.tourism.cta.subtitle}
           </p>
 
           <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
@@ -463,7 +377,9 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
               <span className="font-semibold text-xs truncate w-full text-center">
                 contacto@touraventuraspty.com
               </span>
-              <span className="text-xs text-gray-400">Correo</span>
+              <span className="text-xs text-gray-400">
+                {t.tourism.cta.emailLabel}
+              </span>
             </a>
             <a
               href="https://instagram.com/Tour_aventuras"
@@ -483,16 +399,16 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-accent-500 hover:opacity-90 text-white px-8 py-4 rounded-md font-bold text-lg transition shadow-lg"
           >
-            <FaWhatsapp className="text-xl" /> Reservar mi tour ahora
+            <FaWhatsapp className="text-xl" /> {t.tourism.cta.book}
           </a>
 
           <p className="mt-8 text-sm text-gray-500">
-            ¿Eres empresa?{" "}
+            {t.tourism.cta.corporateQuestion}{" "}
             <Link
-              href="/"
+              href={localizedPath("/", lang)}
               className="text-corporate-400 hover:text-white transition underline"
             >
-              Ver soluciones corporativas →
+              {t.tourism.cta.corporateLink}
             </Link>
           </p>
         </div>
@@ -501,7 +417,8 @@ export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo
       {/* ── Footer ── */}
       <footer className="bg-corporate-900 border-t border-gray-800 py-6 text-center">
         <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} Tour Aventuras Pty · Ciudad de Panamá ·{" "}
+          © {new Date().getFullYear()} Tour Aventuras Pty ·{" "}
+          {t.tourism.footer.location} ·{" "}
           <a
             href="mailto:contacto@touraventuraspty.com"
             className="hover:text-gray-300 transition"
