@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -5,7 +6,8 @@ import ModeToggle from "@/components/ModeToggle";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { localizedPath } from "@/i18n/config";
+import { localizedPath, ogLocale } from "@/i18n/config";
+import { alternatesFor } from "@/i18n/seo";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -136,6 +138,43 @@ function SectionHeader({
 }
 
 /* ─── Page ─── */
+
+export async function generateMetadata({
+  params,
+}: PageProps<'/[lang]/turismo'>): Promise<Metadata> {
+  const { lang } = await params;
+  if (!hasLocale(lang)) return {};
+  const t = getDictionary(lang);
+
+  return {
+    title: t.meta.turismo.title,
+    description: t.meta.turismo.description,
+    alternates: alternatesFor("/turismo", lang),
+    openGraph: {
+      type: "website",
+      locale: ogLocale[lang],
+      alternateLocale: ogLocale[lang === "es" ? "en" : "es"],
+      url: alternatesFor("/turismo", lang).canonical,
+      siteName: t.meta.siteName,
+      title: t.meta.turismo.title,
+      description: t.meta.turismo.description,
+      images: [
+        {
+          url: "/logo_final_icon.png",
+          width: 1200,
+          height: 1200,
+          alt: t.meta.ogAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: t.meta.turismo.title,
+      description: t.meta.turismo.description,
+      images: ["/logo_final_icon.png"],
+    },
+  };
+}
 
 export default async function TurismoPage({ params }: PageProps<'/[lang]/turismo'>) {
   const { lang } = await params;
